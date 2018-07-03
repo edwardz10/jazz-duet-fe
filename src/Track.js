@@ -1,5 +1,5 @@
 import qs from 'query-string';
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
  
 export default class Track extends Component {
 
@@ -20,7 +20,9 @@ export default class Track extends Component {
             events: {
                 'onStateChange': this.onPlayerStateChange.bind(this),
                 'onError': this.onPlayerError.bind(this)
-            }
+            },
+            width: "0",
+            height: "0"
         });
     };
   }
