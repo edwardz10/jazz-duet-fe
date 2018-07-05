@@ -39,6 +39,26 @@ const StandardsAPI = {
                 'F', 'F', 'F', 'F', 'F', 'F', 'D7', 'D7', 'G7', 'G7', 'G7', 'G7', 'Bbm6', 'Bbm6', 'C7', 'Eb7',
                 'Ab', 'Eb7', 'Ab', 'Eb7', 'Ab', 'Eb7', 'Ab', 'C7', 'F', 'F', 'F#O', 'F#O', 'Gm7', 'C7', 'F F#O', 'Gm7 C7'
             ]
+        },
+        {
+            id: 4,
+            name: 'Rose Room',
+            service: 'youtube',
+            video: 'https://www.youtube.com/watch?v=bQeOPDvrAN4',
+            chords: [
+                'G7', 'C7', 'F', 'F', 'F7', 'F7', 'Bb', 'Bb', 'Bbm6', 'Bbm6', 'F', 'D7', 'G7', 'G7', 'C7', 'C7',
+                'G7', 'C7', 'F', 'F', 'F7', 'F7', 'Bb', 'Bb', 'Bbm6', 'Bbm6', 'F', 'D7', 'G7', 'C7', 'Am7', 'D7'
+            ]
+        },
+        {
+            id: 5,
+            name: "Django's Tiger",
+            service: 'youtube',
+            video: 'https://www.youtube.com/watch?v=AQW2RxwwnRo',
+            chords: [
+                'A', 'A', 'A', 'A', 'A/C#', 'CO', 'E7/B', 'E7', 'E7', 'E7', 'F7', 'F7', 'A/C#', 'CO', 'Bm7', 'E7', 
+                'A', 'A', 'A', 'A', 'Em7', 'A7', 'D', 'D', 'D', 'D#O', 'A7', 'B7', 'E7', 'A CO', 'Bm E7' 
+            ]
         }
     ],
     all: function() { return this.standards},
