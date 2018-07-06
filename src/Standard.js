@@ -15,6 +15,7 @@ const Standard = (props) => {
   return (
     <div>
       <h1>{standard.name}</h1>
+	  <h3>Key: {standard.key}</h3>
       <Sheet chords={standard.chords} />
       <Track video={standard.video} />
       <Link to='/standards'>Back</Link>

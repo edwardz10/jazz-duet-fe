@@ -8,7 +8,8 @@ const StandardsAPI = {
             chords: [
                 'Eb', 'Eb', 'Dm7b5', 'G7', 'Cm7', 'Cm7', 'Bbm7', 'Eb7', 'Ab', 'Db7', 'Eb', 'Cm7', 'F7', 'F7', 'Fm7', 'Bb7',
                 'Eb', 'Eb', 'Dm7b5', 'G7', 'Cm7', 'Cm7', 'Bbm7', 'Eb7', 'Ab', 'Db7', 'Eb', 'Am7b5 D7', 'Gm7 Ab', 'Gm7 C7', 'Fm7 B7', 'Eb'
-            ]
+            ],
+			key: 'Eb'
         },
         {
             id: 1,
@@ -18,7 +19,8 @@ const StandardsAPI = {
             chords: [
                 'C', 'C', 'E7', 'E7', 'A7', 'A7', 'Dm7', 'Dm7', 'E7', 'E7', 'Am7', 'Am7', 'D7', 'D7', 'Dm7', 'G7',
                 'C', 'C', 'E7', 'E7', 'A7', 'A7', 'Dm7', 'Dm7', 'F6', 'Fm7', 'C', 'A7', 'Dm7', 'G7', 'C', 'A7'
-            ]
+            ],
+			key: 'C'
         },
         {
             id: 2,
@@ -28,7 +30,8 @@ const StandardsAPI = {
             chords: [
                 'G6/9', 'G6/9', 'G#6/9', 'G#6/9', 'G6/9', 'G6/9', 'E7', 'E7', 'A7', 'A7', 'D7', 'D7', 'G/B', 'BbO', 'Am7', 'D7',
                 'G6/9', 'G6/9', 'G#6/9', 'G#6/9', 'G6/9', 'G6/9', 'E7', 'E7', 'Am6', 'Cm6', 'G/B', 'BbO', 'Am7', 'D7', 'G', 'D7'
-            ]
+            ],
+			key: 'G'
         },
         {
             id: 3,
@@ -38,7 +41,8 @@ const StandardsAPI = {
             chords: [
                 'F', 'F', 'F', 'F', 'F', 'F', 'D7', 'D7', 'G7', 'G7', 'G7', 'G7', 'Bbm6', 'Bbm6', 'C7', 'Eb7',
                 'Ab', 'Eb7', 'Ab', 'Eb7', 'Ab', 'Eb7', 'Ab', 'C7', 'F', 'F', 'F#O', 'F#O', 'Gm7', 'C7', 'F F#O', 'Gm7 C7'
-            ]
+            ],
+			key: 'F'
         },
         {
             id: 4,
@@ -48,7 +52,8 @@ const StandardsAPI = {
             chords: [
                 'G7', 'C7', 'F', 'F', 'F7', 'F7', 'Bb', 'Bb', 'Bbm6', 'Bbm6', 'F', 'D7', 'G7', 'G7', 'C7', 'C7',
                 'G7', 'C7', 'F', 'F', 'F7', 'F7', 'Bb', 'Bb', 'Bbm6', 'Bbm6', 'F', 'D7', 'G7', 'C7', 'Am7', 'D7'
-            ]
+            ],
+			key: 'F'
         },
         {
             id: 5,
@@ -58,7 +63,30 @@ const StandardsAPI = {
             chords: [
                 'A', 'A', 'A', 'A', 'A/C#', 'CO', 'E7/B', 'E7', 'E7', 'E7', 'F7', 'F7', 'A/C#', 'CO', 'Bm7', 'E7', 
                 'A', 'A', 'A', 'A', 'Em7', 'A7', 'D', 'D', 'D', 'D#O', 'A7', 'B7', 'E7', 'A CO', 'Bm E7' 
-            ]
+            ],
+			key: 'A'
+        },
+        {
+            id: 6,
+            name: "Limehouse Blues",
+            service: 'youtube',
+            video: 'https://www.youtube.com/watch?v=nr47ZhrNfUY',
+            chords: [
+                'C7', 'C7', 'C7', 'C7', 'A7', 'A7', 'A7', 'A7', 'G', 'G', 'B7', 'Em', 'A7', 'A7', 'D7', 'Db7', 
+                'C7', 'C7', 'C7', 'C7', 'A7', 'A7', 'A7', 'A7', 'G', 'E7', 'Am', 'Am', 'Cm6', 'D7', 'G', 'G7' 
+            ],
+			key: 'C'
+        },
+        {
+            id: 7,
+            name: "My Melancholy Baby",
+            service: 'youtube',
+            video: 'https://www.youtube.com/watch?v=alEi3HUNd2E',
+            chords: [
+                'C', 'C', 'Bb7', 'A7', 'Dm7', 'A7', 'Dm7', 'Dm7', 'G7', 'G7', 'D7', 'G7', 'C/E', 'EbO', 'Dm7', 'G7', 
+                'C', 'C', 'Bb7', 'A7', 'Dm7', 'A7', 'Dm7', 'Dm7', 'F', 'F#O', 'C', 'A7', 'Dm7', 'G7', 'C EbO', 'Dm G7' 
+            ],
+			key: 'C'
         }
     ],
     all: function() { return this.standards},

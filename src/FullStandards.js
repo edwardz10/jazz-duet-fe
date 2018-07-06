@@ -32,7 +32,7 @@ class FullStandards extends React.Component {
                 {
                     viewableStandards.map(s => (
                         <li key={s.id}>
-                            <Link to={`/standards/${s.id}`}>{s.name}</Link>
+                            <Link to={`/standards/${s.id}`}>{s.name} ({s.key})</Link>
                         </li>
                     ))
                 }
