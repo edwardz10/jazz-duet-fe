@@ -38,19 +38,22 @@ export default class Track extends Component {
     console.log(event)
     switch (event.data) {
       case window['YT'].PlayerState.PLAYING:
-        if (this.cleanTime() == 0) {
+        if (this.cleanTime() === 0) {
           console.log('started ' + this.cleanTime());
         } else {
           console.log('playing ' + this.cleanTime())
         };
         break;
       case window['YT'].PlayerState.PAUSED:
-        if (this.player.getDuration() - this.player.getCurrentTime() != 0) {
-          console.log('paused' + ' @ ' + this.cleanTime());
+        if (this.player.getDuration() - this.player.getCurrentTime() !== 0) {
+          console.log('paused @ ' + this.cleanTime());
         };
         break;
       case window['YT'].PlayerState.ENDED:
         console.log('ended ');
+        break;
+      default:
+        console.log('unsupported event');
         break;
     };
   };
@@ -64,9 +67,7 @@ export default class Track extends Component {
       case 2:
         console.log('' + this.video)
         break;
-      case 100:
-        break;
-      case 101 || 150:
+      default:
         break;
     };
   };
