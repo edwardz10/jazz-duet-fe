@@ -1,10 +1,12 @@
 import React from 'react'
 
 function createChordTable(chords) {
+	let rowLength = (chords.length % 12 === 0) ? 4 : 8;
+
     let chordsDisplayed = [];
 
-    for (var i = 0; i < chords.length; i += 8) {
-        chordsDisplayed.push(chords.slice(i, i + 8));
+    for (var i = 0; i < chords.length; i += rowLength) {
+        chordsDisplayed.push(chords.slice(i, i + rowLength));
     }
 
     let table = []

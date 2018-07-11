@@ -15,6 +15,7 @@ const Standard = (props) => {
   return (
     <div>
       <h1>{standard.name}</h1>
+	  <i><h3>Author: {standard.author}</h3></i>
 	  <h3>Key: {standard.key}</h3>
       <Sheet chords={standard.chords} />
       <Track video={standard.video} />
