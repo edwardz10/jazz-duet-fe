@@ -23,16 +23,14 @@ class FullStandards extends React.Component {
     }
 
     render() {
-		const { viewableStandards } = this.state;
-
         return (
             <div>
                 <input type="text" onChange={this.handleFilterChange} placeholder="Search by name" />
                 <ul>
                 {
-                    viewableStandards.map(s => (
+                    this.state.viewableStandards.standards.map(s => (
                         <li key={s.id}>
-                            <Link to={`/standards/${s.id}`}>{s.name} ({s.key})</Link>
+                            <Link to={`/standards/${s.standard_id}`}>{s.name} ({s.sheet.key})</Link>
                         </li>
                     ))
                 }
