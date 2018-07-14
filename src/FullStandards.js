@@ -18,8 +18,11 @@ class FullStandards extends React.Component {
 
     handleFilterChange = e => {
         this.setState({
-			viewableStandards: this.getViewableEls(this.props.allStandards, e.target.value.toLowerCase())
+			viewableStandards: {
+                standards: this.getViewableEls(this.props.allStandards.standards, e.target.value.toLowerCase())
+            }
         })
+
     }
 
     render() {
