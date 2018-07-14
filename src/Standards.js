@@ -14,7 +14,6 @@ class Standards extends React.Component {
 	componentWillMount() {
 		axios.get('http://localhost:1488/api/standards/all', {crossdomain: true})
 			.then(response => {
-				console.log('got response: ' + response);
 				this.setState({standards: response.data});
 			})
 			.catch(error => {

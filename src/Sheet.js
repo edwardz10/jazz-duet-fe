@@ -1,6 +1,8 @@
 import React from 'react'
 
-function createChordTable(chords) {
+function createChordTable(chordsStr) {
+    let chords = chordsStr.split('|');
+
 	let rowLength = (chords.length % 12 === 0) ? 4 : 8;
 
     let chordsDisplayed = [];
@@ -25,12 +27,12 @@ function createChordTable(chords) {
 }
 
 const Sheet = (props) => {
-  console.log('props.chords=' + props.chords)
+  console.log('props.chords=' + props.sheet.chords)
 
   return (
     <div>
         <table>
-            {createChordTable(props.chords)}
+            {createChordTable(props.sheet.chords)}
         </table>
     </div>
   )

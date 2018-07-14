@@ -18,7 +18,6 @@ class Standard extends React.Component {
 	componentWillMount() {
 		axios.get('http://localhost:1488/api/standards/' + parseInt(this.props.match.params.id, 10), {crossdomain: true})
 			.then(response => {
-				console.log('got response: ' + response);
 				this.setState({standard: response.data});
 			})
 			.catch(error => {
@@ -35,7 +34,7 @@ class Standard extends React.Component {
 					<h1>{this.state.standard.name}</h1>
 					<i><h3>Author: {this.state.standard.author}</h3></i>
 					<h3>Key: {this.state.standard.sheet.key}</h3>
-					<Sheet chords={this.state.standard.sheet} />
+					<Sheet sheet={this.state.standard.sheet} />
 					<Track video={this.state.standard.video} />
 						<Link to='/standards'>Back</Link>
 				</div>
