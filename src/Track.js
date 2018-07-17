@@ -71,13 +71,13 @@ export default class Track extends Component {
         break;
     };
   };
-
+/*
   static urlMap = new Map([
     ['youtube', 'http://www.youtube.com/embed/'],
     ['vimeo', 'http://player.vimeo.com/video/'],
     ['rutube', 'https://rutube.ru/video/']
   ]);
-
+*/
   getIdFromVideoString (vString) {
     const urlArr = vString.split('/');
     const idString = urlArr[urlArr.length - 1];
