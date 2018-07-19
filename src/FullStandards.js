@@ -25,10 +25,15 @@ class FullStandards extends React.Component {
 
     }
 
+    addStandard() {
+        console.log('Add a standard');
+    }
+
     render() {
         return (
             <div>
                 <input type="text" onChange={this.handleFilterChange} placeholder="Search by name" />
+                <button onClick={this.addStandard}>Add Standard</button>
                 <ul>
                 {
                     this.state.viewableStandards.standards.map(s => (
