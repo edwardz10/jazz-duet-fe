@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 class FullStandards extends React.Component {
     constructor (props) {
@@ -25,15 +25,16 @@ class FullStandards extends React.Component {
 
     }
 
-    addStandard() {
+    newStandard() {
         console.log('Add a standard');
+		this.props.history.push('/standards/new');
     }
 
     render() {
         return (
             <div>
                 <input type="text" onChange={this.handleFilterChange} placeholder="Search by name" />
-                <button onClick={this.addStandard}>Add Standard</button>
+                <button onClick={this.newStandard.bind(this)}>Add Standard</button>
                 <ul>
                 {
                     this.state.viewableStandards.standards.map(s => (
@@ -48,5 +49,5 @@ class FullStandards extends React.Component {
     }
 }
 
-export default FullStandards
+export default withRouter(FullStandards)
 

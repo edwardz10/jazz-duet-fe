@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import FullStandards from './FullStandards'
 import Standard from './Standard'
-import StandardsAPI from './standardsApi'
+import NewStandard from './NewStandard'
 import axios from 'axios'
 
 class Standards extends React.Component {
@@ -28,6 +28,7 @@ class Standards extends React.Component {
 			return (
 				<Switch>
 					<Route exact path='/standards' render={() => <FullStandards allStandards={this.state} />} />
+					<Route exact path='/standards/new' component={NewStandard}/>
 					<Route path='/standards/:id' component={Standard}/>
 				</Switch>
 			);
