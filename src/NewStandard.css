@@ -1,24 +1,28 @@
-input{
+input {
   margin-bottom: 5px;
   height: 20px;
   border: 1px solid #d8d8d8;
   padding: 3px;
 }
 
-textarea{
+textarea {
   border: 1px solid #d8d8d8;
   padding: 3px;
 }
 
-button{
+button {
   padding: 10px;
   border: 1px solid #d8d8d8;
   background-color: #f9f9f9;
   border-radius: 3px;
 }
 
-form {
-  width: 25%
+.new_standard_form {
+  width: 25%;
+}
+
+fieldset {
+  border: 0;
 }
 
 .error{
