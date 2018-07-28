@@ -14,10 +14,27 @@ class NewStandard extends React.Component {
 		}
   	}
 
-    contactSubmit(e) {
+    standardSubmit(e) {
 		e.preventDefault();
 
-    }
+        const new_sheet = {chords: this.state.fields.chords, key: this.state.fields.chords};
+        const new_standard = {
+            author: this.state.fields.author,
+            name: this.state.fields.name,
+            sheet: new_sheet,
+            video: this.state.fields.video
+        };
+
+        console.log("creating a new standard: " + new_standard);
+
+        axios.post('http://localhost:1488/api/standards/new', new_standard)
+            .then(function (response) {
+                console.log("a new standard with id=" + response.data.standard_id + " created.");
+            })
+            .catch(function (error) {
+                console.log("an error occurred: " + error);
+        });
+    } 
 
 	handleValidation() {
     	let fields = this.state.fields;
@@ -78,7 +95,7 @@ class NewStandard extends React.Component {
 		return (
 			<div>
 				<h1>New Standard</h1>
-                <form class="new_standard_form" name="contactform" onSubmit={this.contactSubmit.bind(this)}>
+                <form class="new_standard_form" name="contactform" onSubmit={this.standardSubmit.bind(this)}>
                     <div>
                         <fieldset>
                             <input ref="name" type="text" size="30" placeholder="Name" onChange={this.handleChange.bind(this, "name")} value={this.state.fields["name"]}/>
