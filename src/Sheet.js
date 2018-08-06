@@ -1,8 +1,6 @@
 import React from 'react'
 
-function createChordTable(chordsStr) {
-    let chords = chordsStr.split('|');
-
+function createChordTable(chords) {
 	let rowLength = (chords.length % 12 === 0) ? 4 : 8;
 
     let chordsDisplayed = [];
